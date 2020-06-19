@@ -13,7 +13,7 @@ class MethodsForStringListTest {
 
     @BeforeEach
     void setUp() {
-        list = Arrays.asList("A", "Lu", "Kot", "Kote", "Kotek", "BardzoDługiKotek", "12345", "BoMusiBycNaB");
+        list = Arrays.asList("A", "Lu", "Kot", "Kote", "Kotek","bMale" ,"BardzoDługiKotek", "12345", "BoMusiBycNaB");
         methodsForStringList = new MethodsForStringList();
 
     }
@@ -32,7 +32,7 @@ class MethodsForStringListTest {
         System.out.println("Imiona na B:");
         for (String s : methodsForStringList.onlyBNames(list)) {
             System.out.println(s);
-            assertTrue(s.startsWith("B"));
+            assertTrue(s.toUpperCase().startsWith("B"));
         }
     }
 }

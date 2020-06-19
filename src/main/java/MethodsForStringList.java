@@ -31,7 +31,7 @@ public class MethodsForStringList {
         for (String s : list) {
             Optional<String> string = Optional.of(s);
 
-            string.filter((bNames -> bNames.startsWith("B")))
+            string.filter((bNames -> bNames.toUpperCase().startsWith("B")))
                     .ifPresent((bnameOnly -> listWithResult.add(bnameOnly)));
 
         }
